@@ -19,7 +19,7 @@ const MainCard = () => {
                 <div className = 'backgroundVideo1'>
                 <video src = {maincard_vid} autoPlay loop muted />
                 </div>
-                <body>Suck my 9 cm cock</body>
+              
                 <div class ="wrapper">
                     <input type ="text" placeholder = "Enter your email"/>
                     <button  onClick={() => document.getElementById('middle').scrollIntoView({behavior:"smooth" ,speed:
@@ -33,6 +33,7 @@ const MainCard = () => {
             
             <div className='MiddleSlide'>
                 <h1 id = 'middle' className = "CenterTitle"> Choose your sectors </h1>
+                <div className = "btnContainer">
                 <button class = "button1">Financial  💰</button>
                 <button class = "button1">Technology 🤖</button>
                 <button class = "button1">Healthcare  🏥</button>
@@ -44,7 +45,7 @@ const MainCard = () => {
                 <button class = "button1">Utilities  ⚡</button>
                 <button class = "button1">Consumer Staples  💰</button>
                 <button class = "button1">Consumer Discretionary  💰</button>
-
+</div>
 
 
 

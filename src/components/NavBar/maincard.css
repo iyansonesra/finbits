@@ -150,18 +150,29 @@ p {
    
     font-size: 4rem;
     background-color: aliceblue;
+ 
     
     padding: 35px;
     padding-top: 15px;
     padding-bottom: 15px;
-    
+    width: 50rem;
     text-align: center;
     font-size: 16px;
     border: 2px solid #8C52ff;
-    border-radius: 20px;
-    
+    border-radius: 50px;
     color: #8c52ff;
-   
+    margin: 1rem;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+    height: auto;
+
+    
+
 }
 
 .gradient {

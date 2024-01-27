@@ -11,12 +11,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <App/>
-    {/* <Router>
-      <Route path="/" component={App} />
-      <Route path="/AboutUs" component={AboutUs}/>
-      <Route path="/ExamplePage" component={ExamplePage}/>
-    </Router> */}
+    {/* <App/> */}
+    <Router>
+      <Switch>
+        <Route path="/"> <App/> </Route>
+        <Route path="/AboutUs"/> </Route>
+        <Route path="/ExamplePage"/> </Router>
+      </Switch>
+    </Router>
   </React.StrictMode>
 );
 

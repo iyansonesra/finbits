@@ -24,7 +24,7 @@ const MainCard = () => {
                     <input type ="text" placeholder = "Enter your email"/>
                     <button  onClick={() => document.getElementById('middle').scrollIntoView({behavior:"smooth" ,speed:
                 1000})} >
-                    <label>GO!</label>
+                    <label styles ={{color: "black"}}>GO!</label>
                     </button>
                 </div>
             </div>

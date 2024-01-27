@@ -13,11 +13,9 @@ root.render(
   <React.StrictMode>
     {/* <App/> */}
     <Router>
-      <Switch>
-        <Route path="/"> <App/> </Route>
-        <Route path="/AboutUs"/> </Route>
-        <Route path="/ExamplePage"/> </Router>
-      </Switch>
+      <Route path="/"> <App/></Route>
+      <Route path="/AboutUs" component={AboutUs}/>
+      <Route path="/ExamplePage" component={ExamplePage}/>
     </Router>
   </React.StrictMode>
 );

@@ -1,4 +1,11 @@
 .MainCard {
+    
+    /* overflow: hidden; */
+    
+   
+
+}
+.landing {
     border: 1 px solid hsl(0, 0%, 80%);
     border-radius: 10px;
     /* box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.122); */
@@ -6,9 +13,6 @@
     margin: 0px;
     height: 100vh;
     align-items: center;
-    
-   
-
 }
 
 
@@ -19,8 +23,10 @@ button {
 }
 
 button:hover {
-    color: "#8C52FF";
-    opacity: 80%;
+    background-color: "#8C52FF";
+    opacity: 100%;
+    color: "#000000";
+    transition: .72;
 }
 
 input {
@@ -32,6 +38,7 @@ input {
 input:focus {
     outline: 2px solid "#8C52FF";
     background-color: "#8C52FF";
+
 }
 
 input::placeholder {
@@ -41,11 +48,13 @@ input::placeholder {
 
 .wrapper {
     background-color: aliceblue;
-    width: 400px;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: -9em; /* change this for the demo viewing TODO*/
     max-width: 100%;
     position: relative;
-    margin: 0 auto;
-    
+    display: flex;
+    border-radius: 50px;
 }
 
 .wrapper input {
@@ -53,11 +62,11 @@ input::placeholder {
     border: 2px solid white;
     border-radius: 50px;
     padding: 1rem 2rem;
-    width: 80%;
+    width: 100%;
 }
 
 .wrapper button {
-    background: white;
+    background-color: white;
     border-radius: 50px;
     aspect-ratio: 1;
     height: 80%;
@@ -67,10 +76,14 @@ input::placeholder {
     
 }
 
-.image1 {
-    margin-top: -75vh;
-    
-
+.backgroundVideo1 {
+    position: relative;
+    scale: 75%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    z-index: -4;
+    margin-top: -85vh;
 }
 
 
@@ -84,17 +97,19 @@ input::placeholder {
     text-align: center;
     padding-top: 0px;
     width: 100%;
-
+    background: linear-gradient(to bottom, rgb(31, 17, 55) 0%, #8C52ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
  h2 {
-    
+    color: rgb(55, 55, 55);
     margin: 0px;
     padding: 0px;
 }
 
 p {
-    color: black;
+    color: rgb(55, 55, 55);
     font-family: 'DM Sans', sans-serif;
     font-style: italic;
     font-size: 1rem;
@@ -112,5 +127,46 @@ p {
 
 
 .MiddleSlide {
+    scroll-margin-top: 10em;
     margin-top: 100%;
+    /* box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.122); */
+}
+
+.CenterTitle {
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(to right, #292929 0%, #8C52ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.button1 {
+    font-family: 'DM Sans', sans-serif;
+   
+    font-size: 4rem;
+    background-color: aliceblue;
+    
+    padding: 35px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #8C52ff;
+    border-radius: 20px;
+    
+    color: #8c52ff;
+   
+}
+
+.gradient {
+	text-transform: uppercase;
+	
+	font-family: 'DM Sans', sans-serif;
+    font-size: 3rem;
 }

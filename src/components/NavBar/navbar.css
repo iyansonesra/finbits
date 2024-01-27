@@ -11,7 +11,8 @@
     position: sticky;
     top: 0;
     z-index: 5;
-    max-width: 79rem;
+    max-width: 80rem;
+    overflow: hidden;
 }
 #left_logo {
     padding-left: 2em;
@@ -23,7 +24,7 @@
     object-fit: cover;
     height: 2.5rem;
     width: auto;
-   
+    
 }
 
 .desktopMenuListItem:hover {

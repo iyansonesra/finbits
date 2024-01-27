@@ -3,13 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import AboutUs from './AboutUs';
+import ExamplePage from './examplePage/examplesPage.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <App/>
+    {/* <Router>
+      <Route path="/" component={App} />
+      <Route path="/AboutUs" component={AboutUs}/>
+      <Route path="/ExamplePage" component={ExamplePage}/>
+    </Router> */}
   </React.StrictMode>
 );
+
 
 document.body.style = 'background: aliceblue;';
 

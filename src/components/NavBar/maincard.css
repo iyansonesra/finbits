@@ -1,18 +1,116 @@
 .MainCard {
     border: 1 px solid hsl(0, 0%, 80%);
     border-radius: 10px;
-    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.122);
+    /* box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.122); */
     padding: 20px;
     margin: 0px;
-    text-align: center;
     height: 100vh;
+    align-items: center;
+    
+   
+
 }
 
-h2 {
-    color: black;
+
+button {
+    border: none;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    color: "#8C52FF";
+    opacity: 80%;
+}
+
+input {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 2px solid "#8C52FF";
+    background-color: "#8C52FF";
+}
+
+input::placeholder {
+    color: "#8C52FF";
+}
+
+
+.wrapper {
+    background-color: aliceblue;
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+    
+}
+
+.wrapper input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 80%;
+}
+
+.wrapper button {
+    background: white;
+    border-radius: 50px;
+    aspect-ratio: 1;
+    height: 80%;
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    
+}
+
+.image1 {
+    margin-top: -75vh;
+    
+
+}
+
+
+
+.MainText {
+    font-family: 'DM Sans', sans-serif;
+   
+    font-size: 4rem;
+   
+    
+    text-align: center;
+    padding-top: 0px;
+    width: 100%;
+
+}
+
+ h2 {
+    
+    margin: 0px;
+    padding: 0px;
 }
 
 p {
     color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-style: italic;
+    font-size: 1rem;
 }
 
+.WavyBottom {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    
+    
+ 
+    
+}
+
+
+.MiddleSlide {
+    margin-top: 100%;
+}

@@ -1,17 +1,24 @@
 .navbar {
     height: 5rem;
-    width: 100vw;
+    width: 120vw;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.122);
     margin: 0 auto;
-    padding: 1rem 2rem;
+    /* padding: 0rem 2rem; */
+    background-color: aliceblue;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    z-index: 3;
-    max-width: 75rem;
+    z-index: 5;
+    max-width: 79rem;
 }
-
+#left_logo {
+    padding-left: 2em;
+}
+#right_logo {
+    padding-right: 2em;
+}
 .logo {
     object-fit: cover;
     height: 2.5rem;
@@ -26,14 +33,15 @@
 }
 
 .desktopMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-right: 3rem;
+
 }
 .desktopMenuListItem {
     margin: 1rem;
     cursor: pointer;
     color: black;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
     
     
  

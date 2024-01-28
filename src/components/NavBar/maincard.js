@@ -273,7 +273,7 @@ const generateTables = () => {
                 
                 
                 <div className ="wrapper3">
-                    <button onClick={() => {document.getElementById('last-extra').scrollIntoView(false, {behavior:"smooth",speed: 1000}); }} className = "wrapper_button_3" >{ /* TOOK OUT LAMBDA CALL */}
+                    <button onClick={() => {document.getElementById('last-extra').scrollIntoView(false, {behavior:"smooth",speed: 1000}); callLambdaFunction();}} className = "wrapper_button_3" >{ /* TOOK OUT LAMBDA CALL */}
                     {/* <span>&#8594;</span> */}
                     <img src = {right_arrow} alt="logo" id = "right_arrow3" className = 'right_arrow3'/>
                     </button>

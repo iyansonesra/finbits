@@ -50,6 +50,39 @@ const MainCard = () => {
     };
 
 
+    const [response, setResponse] = useState('');
+
+    const callLambdaFunction = async () => {
+        try {
+        const apiEndpoint = 'https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/'; // Replace with your actual API Gateway endpoint
+        const requestBody = {};
+        stockTickers.forEach((ticker, index) => {
+            requestBody[`key${index + 1}`] = ticker;
+        });
+
+        console.log('Request Body:', JSON.stringify(requestBody));
+
+        const response = await fetch(apiEndpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+            'Content-Type': 'application/json',
+            // Add any additional headers if needed
+            },
+            // Add request body if needed
+            body: JSON.stringify(requestBody),
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('Lambda response:', data);
+        } catch (error) {
+        console.error('Error calling Lambda function:', error);
+        }
+    };
+
 //     const generateRows = () => {
 //     const rows = [];
 //     for (let i = 0; i < stockTickers.length; i += 3) {
@@ -212,7 +245,7 @@ const generateTables = () => {
                 </div> } */}
 
                 <div className ="wrapper4">
-                    <input type ="text" value={inputValue} onChange={handleInputChange} placeholder = "Enter a string"/>
+                    <input type ="text" value={inputValue} onChange={handleInputChange} placeholder = "Enter a stock"/>
                     <button onClick={addString} className = "add_btn" > Add </button>
                 </div>
                 {/* <div>
@@ -237,7 +270,7 @@ const generateTables = () => {
                 
                 
                 <div className ="wrapper3">
-                    <button onClick={() => document.getElementById('last').scrollIntoView(false, {behavior:"smooth",speed: 1000})} className = "wrapper_button_3" >
+                    <button onClick={() => {document.getElementById('last').scrollIntoView(false, {behavior:"smooth",speed: 1000}); callLambdaFunction();}} className = "wrapper_button_3" >
                     {/* <span>&#8594;</span> */}
                     <img src = {right_arrow} alt="logo" id = "right_arrow3" className = 'right_arrow3'/>
                     </button>

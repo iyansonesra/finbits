@@ -326,6 +326,38 @@ p {
 	-webkit-text-fill-color: transparent;
 }
 
+.CenterTitle-final {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+   
+    justify-content: center;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 5rem;
+    padding-top: 1100%;
+    background: linear-gradient(to right, #292929 0%, #8C52ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+#last-extra {
+    margin-top: -20%;
+ 
+    
+}
+
+.confetti {
+    scale: 75%;
+    margin-top: -100%;
+    margin-left: -20%;
+    position: relative;
+    opacity: 40%;
+    z-index: -10;
+}
+
 .button1 {
     font-family: 'DM Sans', sans-serif;
    
@@ -426,6 +458,9 @@ p {
     margin-top: 100%;
 }
 
+.LastSlide-extra{
+    margin-top: -600%;
+}
 
 
 .bottomOfPage {

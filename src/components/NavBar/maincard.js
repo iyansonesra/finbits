@@ -4,9 +4,9 @@ import React, {useState, TextInput, View} from 'react';
 import maincard_vid from '../../assets/maincard_vid.mp4';
 import blob_1 from '../../assets/blob_1.png';
 import blob_2 from '../../assets/blob2.png';
-import Papa from 'papaparse';
 import right_arrow from '../../assets/right_arrow.png';
 import letterX from '../../assets/letter_x.png';
+import confetti from '../../assets/purple_confetti.png';
 
 
 const MainCard = () => {
@@ -54,10 +54,13 @@ const MainCard = () => {
 
     const callLambdaFunction = async () => {
         try {
-        const apiEndpoint = 'https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/'; // Replace with your actual API Gateway endpoint
+        const apiEndpoint = 'https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/'; // https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/
         const requestBody = {};
-        stockTickers.forEach((ticker, index) => {
+        selectedButtons.forEach((ticker, index) => {
             requestBody[`key${index + 1}`] = ticker;
+        });
+        stockTickers.forEach((ticker, index) => {
+            requestBody[`key${index + 4}`] = ticker;
         });
 
         console.log('Request Body:', JSON.stringify(requestBody));
@@ -73,9 +76,9 @@ const MainCard = () => {
             body: JSON.stringify(requestBody),
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        // if (!response.ok) {
+        //     throw new Error(`HTTP error! Status: ${response.status}`);
+        // }
         const data = await response.json();
         console.log('Lambda response:', data);
         } catch (error) {
@@ -270,7 +273,7 @@ const generateTables = () => {
                 
                 
                 <div className ="wrapper3">
-                    <button onClick={() => {document.getElementById('last').scrollIntoView(false, {behavior:"smooth",speed: 1000}); callLambdaFunction();}} className = "wrapper_button_3" >
+                    <button onClick={() => {document.getElementById('last-extra').scrollIntoView(false, {behavior:"smooth",speed: 1000}); }} className = "wrapper_button_3" >{ /* TOOK OUT LAMBDA CALL */}
                     {/* <span>&#8594;</span> */}
                     <img src = {right_arrow} alt="logo" id = "right_arrow3" className = 'right_arrow3'/>
                     </button>
@@ -278,6 +281,68 @@ const generateTables = () => {
 
                 
                 <div className='bottomOfPage' id = 'last'/>
+            </div>
+
+
+            <div className='LastSlide-extra'>
+                <h1 className = "CenterTitle-final">That's it!<br></br>Check your e-mail for your first finbit! </h1>
+                {/* <div class ="wrapper2">
+
+                </div> */}
+                {/* <script>
+                    // const area = document.querySelector('textarea')
+                    // const button = document.querySelector('button')
+                    // const saved = []
+
+                    // button.addEventListener('click', () => {
+                    // saved.push(area.value)
+                    // area.value = ''
+                    // console.log(saved)
+                    // })
+                </script> */}
+                {/* <ul>
+                    {stockTickers.map((str, index) => (
+                    <li key={index}>{str}</li>
+                    ))}
+                </ul> */}
+
+                
+                {/* { <div className='center-elems'>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleInputChange}
+                    placeholder="Enter a string"
+                />
+                <button onClick={addString} style={{cursor: 'pointer'}}>Add String to Array</button>
+                { <button onClick={printStockTickers}>print array</button> }
+                
+                </div> } */}
+
+              
+                {/* <div>
+                    <table className="center">
+                        {stockTickers.map((str, index) => (
+                            
+                        <div key={index} className="generated-text-box">
+                            {str}
+                            <button onClick={() => handleRemoveElement(index)}>X</button>
+                        </div>
+                        ))}
+                    </table>
+                    
+                </div> */}
+                {/* <table className="center">
+                    <tbody>{generateRows()}</tbody>
+                </table> */}
+                
+                <img src = {confetti} alt="logo" id = "logo" className = 'confetti'/>
+                
+                
+                
+
+                
+                <div id = 'last-extra'/>
             </div>
            
         </div>

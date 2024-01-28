@@ -1,13 +1,12 @@
-import Navbar from "../components/NavBar/navbar";
-
 import React from 'react';
+import {Link, Route } from 'react-router-dom';
+import './examplePage.css';
+
+
 function examplesPage() {
   return (
-    <div className="App"> 
-      <Navbar/>
-      <body>
-        Hello my chinks
-        </body>
+    <div>
+      <h1 className="test"> Hello world</h1>
     </div>
   );
 }

@@ -3,20 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import AboutUs from './AboutUs';
-import ExamplePage from './examplePage/examplesPage.js'
+import { BrowserRouter } from 'react-router-dom';
+// import AboutUs from './AboutUs';
+import Navbar from "./components/NavBar/navbar.js";
+import ExamplePage from './examplePage/examplesPage.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    {/* <App/> */}
-    <Router>
-      <Route path="/"> <App/></Route>
-      <Route path="/AboutUs" component={AboutUs}/>
-      <Route path="/ExamplePage" component={ExamplePage}/>
-    </Router>
+  <React.StrictMode>  
+    <BrowserRouter>
+      <App/> 
+    </BrowserRouter>
   </React.StrictMode>
 );
 

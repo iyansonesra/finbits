@@ -82,7 +82,7 @@ const MainCard = () => {
   const callLambdaFunction = async () => {
     try {
       const apiEndpoint =
-        "https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/"; // https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/
+        "https://kr6sqah6hrhfkmo6yrm6fyk4ry0obxzo.lambda-url.us-east-1.on.aws/"; // https://onvcdkettwlr4ludhpwfmte42a0yujmq.lambda-url.us-east-1.on.aws/
       const requestBody = {};
       selectedButtons.forEach((ticker, index) => {
         requestBody[`key${index + 1}`] = ticker;
